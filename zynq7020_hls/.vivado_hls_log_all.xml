@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:27.758+0800" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:27.652+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name '__hls_fptosi_float_i' to 'p_hls_fptosi_float_i'." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:26.822+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function '__hls_fptosi_float_i32' to '__hls_fptosi_float_i' (r:/builds/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:15:54)" projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:26.381+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (zynq7020_hls/src/main.cpp:46:15) in function 'cnn' : &#xD;&#xA;&#xD;&#xA;more than one sub loop." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:26.265+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-1' (zynq7020_hls/src/main.cpp:46:15) in function 'cnn' is an infinite loop." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:26.184+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.7.1.1' (zynq7020_hls/src/main.cpp:209:28) in function 'cnn' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:26.135+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.5.1.1' (zynq7020_hls/src/main.cpp:125:28) in function 'cnn' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:26.093+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.7.1.1.1.1' (zynq7020_hls/src/main.cpp:215) in function 'cnn': cannot completely unroll a loop with a variable trip count." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:25.106+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.7.1.1.1' (zynq7020_hls/src/main.cpp:213) in function 'cnn': cannot completely unroll a loop with a variable trip count." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:25.078+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.5.1.1.1.1.1' (zynq7020_hls/src/main.cpp:136) in function 'cnn': cannot completely unroll a loop with a variable trip count." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:25.066+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.5.1.1.1.1' (zynq7020_hls/src/main.cpp:133) in function 'cnn': cannot completely unroll a loop with a variable trip count." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:25.051+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1.5.1.1.1' (zynq7020_hls/src/main.cpp:130) in function 'cnn': cannot completely unroll a loop with a variable trip count." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:25.028+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in_data.data.V' (zynq7020_hls/src/main.cpp:32)." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:24.983+0800" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'out_data.data.V' (zynq7020_hls/src/main.cpp:32)." projectName="zynq7020_hls" solutionName="solution1" date="2025-05-28T09:16:24.920+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

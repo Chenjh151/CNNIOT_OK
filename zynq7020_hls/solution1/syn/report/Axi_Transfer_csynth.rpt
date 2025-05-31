@@ -1,0 +1,148 @@
+
+
+================================================================
+== Vivado HLS Report for 'Axi_Transfer'
+================================================================
+* Date:           Wed May 28 09:16:28 2025
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        zynq7020_hls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 0.705 ns |   1.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        0|        0|   0 ns   |   0 ns   |    1|    1| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     33|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      6|    -|
+|Register         |        -|      -|       1|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|       1|     39|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+-------+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1  |    or    |      0|  0|   1|           1|           1|
+    |out_data_TDATA   |  select  |      0|  0|  32|           1|          32|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |Total            |          |      0|  0|  33|           2|          33|
+    +-----------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |in_data_TDATA_blk_n   |   3|          2|    1|          2|
+    |out_data_TDATA_blk_n  |   3|          2|    1|          2|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |   6|          4|    2|          4|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------+---+----+-----+-----------+
+    |    Name   | FF| LUT| Bits| Const Bits|
+    +-----------+---+----+-----+-----------+
+    |ap_CS_fsm  |  1|   0|    1|          0|
+    +-----------+---+----+-----+-----------+
+    |Total      |  1|   0|    1|          0|
+    +-----------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+-----------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++----------------------+-----+-----+------------+-----------------+--------------+
+|ap_clk                |  in |    1| ap_ctrl_hs |   Axi_Transfer  | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs |   Axi_Transfer  | return value |
+|ap_start              |  in |    1| ap_ctrl_hs |   Axi_Transfer  | return value |
+|ap_done               | out |    1| ap_ctrl_hs |   Axi_Transfer  | return value |
+|ap_idle               | out |    1| ap_ctrl_hs |   Axi_Transfer  | return value |
+|ap_ready              | out |    1| ap_ctrl_hs |   Axi_Transfer  | return value |
+|ap_return             | out |   32| ap_ctrl_hs |   Axi_Transfer  | return value |
+|in_data_TDATA_blk_n   | out |    1| ap_ctrl_hs |   Axi_Transfer  | return value |
+|out_data_TDATA_blk_n  | out |    1| ap_ctrl_hs |   Axi_Transfer  | return value |
+|ap_ce                 |  in |    1| ap_ctrl_hs |   Axi_Transfer  | return value |
+|in_data_TDATA         |  in |   32|    axis    |  in_data_data_V |    pointer   |
+|in_data_TVALID        |  in |    1|    axis    |  in_data_data_V |    pointer   |
+|in_data_TREADY        | out |    1|    axis    |  in_data_dest_V |    pointer   |
+|in_data_TDEST         |  in |    1|    axis    |  in_data_dest_V |    pointer   |
+|in_data_TKEEP         |  in |    4|    axis    |  in_data_keep_V |    pointer   |
+|in_data_TSTRB         |  in |    4|    axis    |  in_data_strb_V |    pointer   |
+|in_data_TUSER         |  in |    1|    axis    |  in_data_user_V |    pointer   |
+|in_data_TLAST         |  in |    1|    axis    |  in_data_last_V |    pointer   |
+|in_data_TID           |  in |    1|    axis    |   in_data_id_V  |    pointer   |
+|out_data_TDATA        | out |   32|    axis    | out_data_data_V |    pointer   |
+|out_data_TREADY       |  in |    1|    axis    | out_data_data_V |    pointer   |
+|out_data_TVALID       | out |    1|    axis    | out_data_dest_V |    pointer   |
+|out_data_TDEST        | out |    1|    axis    | out_data_dest_V |    pointer   |
+|out_data_TKEEP        | out |    4|    axis    | out_data_keep_V |    pointer   |
+|out_data_TSTRB        | out |    4|    axis    | out_data_strb_V |    pointer   |
+|out_data_TUSER        | out |    1|    axis    | out_data_user_V |    pointer   |
+|out_data_TLAST        | out |    1|    axis    | out_data_last_V |    pointer   |
+|out_data_TID          | out |    1|    axis    |  out_data_id_V  |    pointer   |
+|value_r               |  in |   32|   ap_none  |     value_r     |    scalar    |
+|loop_r                |  in |    1|   ap_none  |      loop_r     |    scalar    |
++----------------------+-----+-----+------------+-----------------+--------------+
+
